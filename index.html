@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/mail-reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css">
   </head>
@@ -10,64 +11,81 @@
           <table cellpadding="0" cellspacing="0" border="0" align="center" class='mail-wrap-table'>
             <tr>
               <td class='mail-header'>
-                <img class="image_fix block-center" src="./assets/images/logo.png" alt="Inspire9" title="Inspire9" width="110" />
+                <a href='http://inspire9.com' target='_blank' class='link-block'>
+                  <img class="image_fix block-center" src="./assets/images/logo.png" alt="Inspire9" title="Inspire9" width="110" />
+                </a>
               </td>
             </tr>
 
             <tr>
               <td class='mail-section mail-section-border'>
-                <img class="image_fix block-center feature-image" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
+                <img mc:edit="header_image" class="image_fix block-center feature-image" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
                 <div class='feature-content'>
-                  <h1> Main Story Heading</h1>
-                  <p>Some body copy here some body copy here some body copy here some body copy here some body copy here</p>
-                  <a href='http://inspire9.com' target='_blank' class='btn'>Find out more</a>
+                  <h1 mc:edit="header_title"> Main Story Heading</h1>
+                  <div mc:edit="header_body">
+                    <p>Some body copy here some body copy here some body copy here some body copy here some body copy here</p>
+                    <a href='http://inspire9.com' target='_blank' class='btn'>Find out more</a>
+                  </div>
                 </div>
               </td>
             </tr>
 
             <tr>
               <td class='mail-section'>
-                <div class='quote-bubble'>
+                <div mc:edit="quote_content" class='quote-bubble'>
                   A quote from an inspirational person.
                   If not inspiring, then funny.
                 </div>
-                <div class='quote-tick-wrap'>
-                  <div class='quote-tick'></div>
-                </div>
-                <div class='quote-name'>Emma Forster</div>
-                <div class='quote-role'>Profession</div>
+                <table width='100%'>
+                  <tr>
+                    <td>
+                      <div class='quote-tick-wrap' text-align='right'>
+                        <div class='quote-tick'>
+                          <img src="./assets/images/corner.png" />
+                        </div>
+                      </div>
+                    </td>
+                    <td width='20'></td>
+                  </tr>
+                </table>
+                <div mc:edit="quote_author" class='quote-name'>Emma Forster</div>
+                <div mc:edit="quote_role" class='quote-role'>Profession</div>
               </td>
             </tr>
 
             <tr>
               <td class='mail-section mail-section-border'>
                 <table class='table-grid-spaced'>
-                  <tr>
-                    <td>
-                      <img class="image_fix block-center feature-image" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
-                      <h2>Short heading</h2>
-                      <p>Some body copy can go here</p>
-                      <a href='http://inspire9.com' target='_blank' class='btn'>Find out more</a>
+                  <tr mc:repeatable>
+                    <td class='mobile-block'>
+                      <img mc:edit="article_image" class="image_fix block-center feature-image" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
+                      <h2 mc:edit="article_title">Short heading</h2>
+                      <div mc:edit="article_text">
+                        <p>Some body copy can go here</p>
+                        <a href='http://inspire9.com' target='_blank' class='btn'>Find out more</a>
+                      </div>
                     </td>
-                    <td>
-                      <img class="image_fix block-center feature-image" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
-                      <h2>Short heading</h2>
-                      <p>Some body copy can go here</p>
-                      <a href='http://inspire9.com' target='_blank' class='btn'>Find out more</a>
+                    <td mc:hideable class='mobile-block'>
+                      <img mc:edit="article_image_2" class="image_fix block-center feature-image" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
+                      <h2 mc:edit="article_title_2">Short heading</h2>
+                      <div mc:edit="article_text_2">
+                        <p>Some body copy can go here</p>
+                        <a href='http://inspire9.com' target='_blank' class='btn'>Find out more</a>
+                      </div>
                     </td>
                   </tr>
                 </table>
 
-                <div class='highlight-block'>
+                <div mc:hideable class='highlight-block'>
                   <table class='table color-white'>
                     <tr>
                       <td>
-                        <span class='highlight-block-message'>
+                        <span mc:edit='highlight-text' class='highlight-block-message'>
                           Check out what else we've been doing
                         </span>
                       </td>
                       <td width='140'>
-                        <a href='http://inspire9.com' target='_blank' class='btn'>More News</a>
+                        <a mc:edit='highlight-link' href='http://inspire9.com' target='_blank' class='btn'>More News</a>
                       </td>
                     </tr>
                   </table>
@@ -75,107 +93,103 @@
               </td>
             </tr>
 
-            <tr>
+            <tr mc:hideable>
               <td class='mail-section'>
                 <div class='highlight-block highlight-block-melon'>
                   <table class='table-grid-spaced'>
                     <tr>
-                      <th>
+                      <td class='mobile-block'>
                         <h2 class='poster color-white'>Richmond Events</h2>
-                      </th>
-                      <th>
-                        <h2 class='poster color-white'>Dream Factory Events</h2>
-                      </th>
-                    </tr>
 
-                    <tr>
-                      <td>
-                        <div class='event-wrap'>
-                          <img class="image_fix block-center event-img" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
-                          <div class='event-body'>
-                            <h2 class='event-heading'>Short heading</h2>
-                            <strong>Event Details</strong>
-                            <p>Short blurb about the event short blurb about the event short blurb about the event</p>
-                            <a href='http://inspire9.com' target='_blank' class='btn'>Sign up</a>
-                          </div>
-                        </div>
+                        <table>
+                          <tr>
+                            <td mc:repeatable>
+                              <div class='event-wrap'>
+                                <img mc:edit='event_image' class="image_fix block-center event-img" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
+                                <div class='event-body'>
+                                  <h2 mc:edit='event_heading' class='event-heading'>Short heading</h2>
+                                  <strong mc:edit='event_subheading'>Event Details</strong>
+                                  <p mc:edit='event_body'>Short blurb about the event short blurb about the event short blurb about the event</p>
+                                  <div mc:edit='event_link'>
+                                    <a href='http://inspire9.com' target='_blank' class='btn'>Sign up</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
                       </td>
-                      <td>
-                        <div class='event-wrap'>
-                          <img class="image_fix block-center event-img" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
-                          <div class='event-body'>
-                            <h2 class='event-heading'>Short heading</h2>
-                            <strong>Event Details</strong>
-                            <p>Short blurb about the event short blurb about the event short blurb about the event</p>
-                            <a href='http://inspire9.com' target='_blank' class='btn'>Sign up</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class='event-wrap'>
-                          <img class="image_fix block-center event-img" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
-                          <div class='event-body'>
-                            <h2 class='event-heading'>Short heading</h2>
-                            <strong>Event Details</strong>
-                            <p>Short blurb about the event short blurb about the event short blurb about the event</p>
-                            <a href='http://inspire9.com' target='_blank' class='btn'>Sign up</a>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class='event-wrap'>
-                          <img class="image_fix block-center event-img" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
-                          <div class='event-body'>
-                            <h2 class='event-heading'>Short heading</h2>
-                            <strong>Event Details</strong>
-                            <p>Short blurb about the event short blurb about the event short blurb about the event</p>
-                            <a href='http://inspire9.com' target='_blank' class='btn'>Sign up</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
+                      <td class='mobile-block'>
+                        <h2 class='poster color-white'>Footscray Events</h2>
 
+                        <table>
+                          <tr>
+                            <td mc:repeatable>
+                              <div class='event-wrap'>
+                                <img mc:edit='event_image_footscray' class="image_fix block-center event-img" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
+                                <div class='event-body'>
+                                  <h2 mc:edit='event_heading_footscray' class='event-heading'>Short heading</h2>
+                                  <strong mc:edit='event_subheading_footscray'>Event Details</strong>
+                                  <p mc:edit='event_body_footscray'>Short blurb about the event short blurb about the event short blurb about the event</p>
+                                  <div mc:edit='event_link_footscray'>
+                                    <a href='http://inspire9.com' target='_blank' class='btn'>Sign up</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
                   </table>
 
                 </div>
               </td>
             </tr>
 
-            <tr>
+            <tr mc:hideable>
               <td class='mail-section'>
                 <table class='table-grid-spaced'>
                   <tr>
-                    <th>
-                      <h2 class='poster'>Listen</h2>
-                    </th>
-                    <th>
-                      <h2 class='poster'>Watch</h2>
-                    </th>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class='event-wrap'>
-                        <a href='http://google.com' target='_blank' class='link-block'>
-                          <img class="image_fix block-center event-img" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
-                          <div class='event-body'>
-                            <h2 class='event-heading'>Album Name</h2>
-                            <strong>Artist Name</strong>
-                          </div>
-                        </a>
-                      </div>
+                    <td class='mobile-block'>
+                      <h2 mc:edit='footer_listen' class='poster'>Our Eyes</h2>
+
+                      <table>
+                        <tr>
+                          <td>
+                            <div class='event-wrap'>
+                              <img mc:edit='footer_listen_image' class="image_fix block-center event-img" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
+                              <div mc:edit='footer_listen_content' class='event-body'>
+                                <h2 class='event-heading'>
+                                  Album Name
+                                </h2>
+                                <strong>Artist Name</strong>
+                              </div>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
                     </td>
-                    <td>
-                      <div class='event-wrap'>
-                        <a href='http://google.com' target='_blank' class='link-block'>
-                          <img class="image_fix block-center event-img" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
-                          <div class='event-body'>
-                            <h2 class='event-heading'>Movie TV/SHOW</h2>
-                            <strong>Director</strong>
-                          </div>
-                        </a>
-                      </div>
+                    <td class='mobile-block'>
+                      <h2 mc:edit='footer_watch' class='poster'>And Ears</h2>
+
+                      <table>
+                        <tr>
+                          <td>
+                            <div class='event-wrap'>
+                              <img mc:edit='footer_watch_image' class="image_fix block-center event-img" src="./assets/images/hero-1.jpg" alt="Inspire9" title="Inspire9" width="" />
+                              <div mc:edit='footer_watch_content' class='event-body'>
+                                <h2 class='event-heading'>
+                                  Movie TV/SHOW
+                                </h2>
+                                <strong>Director</strong>
+                              </div>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
                     </td>
                   </tr>
                 </table>
@@ -200,11 +214,11 @@
 
           </table>
 
+          <div class='mail-footer'>
+            *|UNSUB|*
+          </div>
         </td>
       </tr>
     </table>
-    <div class='mail-footer'>
-      *|UNSUB|*
-    </div>
   </body>
 </html>

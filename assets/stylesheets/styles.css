@@ -7,14 +7,19 @@
 
 body {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  background: white;
+}
+#backgroundTable {
+  background: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #3E3F40 !important;
   text-transform: uppercase;
+  line-height: 1.1;
 }
 h2.poster {
-  margin: 0;
+  margin: 5px 0;
   font-family: 'PosterSans';
   text-transform: uppercase;
   font-size: 2.2rem;
@@ -36,8 +41,17 @@ table {
 .table-grid-spaced td:first-child { padding-left: 0 }
 .table-grid-spaced td:last-child { padding-right: 0 }
 
+@media screen and (max-width: 620px) {
+  .table-grid-spaced td, .table-grid-spaced td:first-child { padding-left: 0 }
+  .table-grid-spaced td, .table-grid-spaced td:last-child { padding-right: 0 }
+}
+
 .link-block {
   display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+.link-unstyled {
   text-decoration: none;
   color: inherit;
 }
@@ -45,6 +59,7 @@ table {
 .mail-wrap {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   padding: 0 10px;
+  text-align: center;
 }
 @media screen and (min-width: 660px) {
   .mail-wrap {
@@ -65,6 +80,10 @@ table {
 .mail-section-border {
   border-bottom: 1px solid #D6D7D9;
 }
+.mail-footer {
+  padding: 15px 0;
+  font-size: .9em;
+}
 
 .highlight-block {
   padding: 10px;
@@ -77,6 +96,7 @@ table {
 }
 .highlight-block-message {
   font-size: 1.4rem;
+  line-height: 1.1;
 }
 
 .feature-image {
@@ -94,23 +114,24 @@ table {
   background-color: #E65A60;
   color: white;
   font-size: 2em;
+  line-height: 1.1;
   border-radius: 10px;
 }
 .quote-name {
   text-align: right;
   text-transform: uppercase;
   font-size: 2em;
+  line-height: 1.1;
   font-weight: bold;
   color: #3E3F40;
 }
 .quote-role { text-align: right; }
 .quote-tick-wrap { text-align: right; }
 .quote-tick {
-  margin-top: -10px;
   margin-right: 4%;
-  height: 10px;
-  border-right: 35px solid #E65A60;
-  border-bottom: 35px solid white;
+  height: 50px;
+  // border-right: 35px solid #E65A60;
+  // border-bottom: 35px solid white;
 }
 .event-wrap {
   background: white;
@@ -144,3 +165,10 @@ table {
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .color-white { color: white !important; }
+
+@media screen and (max-width: 620px) {
+  .mobile-block {
+    display: block;
+    width: 100%;
+  }
+}
