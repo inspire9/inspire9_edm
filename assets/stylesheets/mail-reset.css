@@ -71,8 +71,8 @@ table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
 
 Bring inline: Yes. */
 
+a:link { color: #6C7070; }
 /* Or to go the gold star route...
-a:link { color: orange; }
 a:visited { color: blue; }
 a:hover { color: green; }
 */
