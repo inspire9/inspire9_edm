@@ -46,6 +46,7 @@ table {
 .table-grid-spaced td:last-child { padding-right: 0 }
 
 @media screen and (max-width: 620px) {
+  .table-grid-spaced td { width: 100% }
   .table-grid-spaced td, .table-grid-spaced td:first-child { padding-left: 0 }
   .table-grid-spaced td, .table-grid-spaced td:last-child { padding-right: 0 }
 }
@@ -169,3 +170,10 @@ table {
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .color-white { color: white !important; }
+
+@media screen and (max-width: 620px) {
+  .mobile-block {
+    display: block;
+    width: 100%;
+  }
+}
