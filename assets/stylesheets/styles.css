@@ -27,9 +27,7 @@ h2.poster {
   font-size: 2.2rem;
   font-weight: normal;
 }
-@media screen and (max-width: 620px) {
-  h1 { font-size: 1.5em; }
-}
+
 img { max-width: 100%; }
 
 table {
@@ -40,18 +38,6 @@ table {
 
 .table { width: 100%; }
 .table-grid-spaced { margin-bottom: 15px; }
-.table-grid-spaced td {
-  width: 50%;
-  padding: 10px;
-}
-.table-grid-spaced td:first-child { padding-left: 0; }
-.table-grid-spaced td:last-child { padding-right: 0; }
-
-@media screen and (max-width: 620px) {
-  .table-grid-spaced td { width: 100%; }
-  .table-grid-spaced td, .table-grid-spaced td:first-child { padding-left: 0; }
-  .table-grid-spaced td, .table-grid-spaced td:last-child { padding-right: 0; }
-}
 
 .link-block {
   display: inline-block;
@@ -67,11 +53,6 @@ table {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   padding: 0 10px;
   text-align: center;
-}
-@media screen and (min-width: 660px) {
-  .mail-wrap {
-    padding: 0;
-  }
 }
 .mail-wrap-table {
   margin: 20px auto;
@@ -108,12 +89,6 @@ table {
 
 .feature-image {
   border-radius: 6px;
-}
-@media (min-width: 450px) {
-  .feature-content {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
 }
 
 .quote-bubble {
@@ -175,9 +150,3 @@ table {
 .text-left { text-align: left; }
 .color-white { color: white !important; }
 
-@media screen and (max-width: 620px) {
-  .mobile-block {
-    display: block;
-    width: 100%;
-  }
-}

@@ -2,10 +2,44 @@
   <head>
     <title>Inspire9</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <!-- <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link href="./assets/fonts/poster_sans.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="./assets/fonts/poster_sans.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/mail-reset.css" >
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" >
+    <style>
+      @media screen and (max-width: 620px) {
+        h1 { font-size: 1.5em; }
+      }
+
+      .table-grid-spaced td {
+        width: 50%;
+        padding: 10px;
+      }
+      .table-grid-spaced td:first-child { padding-left: 0; }
+      .table-grid-spaced td:last-child { padding-right: 0; }
+      @media screen and (max-width: 620px) {
+        .table-grid-spaced td { width: 100%; }
+        .table-grid-spaced td, .table-grid-spaced td:first-child { padding-left: 0; }
+        .table-grid-spaced td, .table-grid-spaced td:last-child { padding-right: 0; }
+      }
+      @media screen and (min-width: 660px) {
+        .mail-wrap {
+          padding: 0;
+        }
+      }
+      @media (min-width: 450px) {
+        .feature-content {
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+      }
+      @media screen and (max-width: 620px) {
+        .mobile-block {
+          display: block;
+          width: 100%;
+        }
+      }
+    </style>
   </head>
   <body>
     <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
