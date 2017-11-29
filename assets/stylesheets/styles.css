@@ -11,7 +11,7 @@ body {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   background: white;
 }
-.backgroundTable {
+#backgroundTable {
   background: white;
 }
 
@@ -166,14 +166,14 @@ table {
   padding: 10px;
   border-radius: 6px;
   background: #E65A60;
-  color: white;
+  color: #fff !important;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .text-center { text-align: center; }
 .text-left { text-align: left; }
-.color-white { color: white; }
+.color-white { color: white !important; }
 
 @media screen and (max-width: 620px) {
   .mobile-block {
