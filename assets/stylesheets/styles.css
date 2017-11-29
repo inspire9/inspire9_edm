@@ -1,15 +1,17 @@
 
-// Primary Melon: #E65A60
-// Text Grey: #6C7070
-// Text Dark: #3E3F40
-// BG Grey: #575A5B
-// Line Color: #D6D7D9
+/*
+  Primary Melon: #E65A60
+  Text Grey: #6C7070
+  Text Dark: #3E3F40
+  BG Grey: #575A5B
+  Line Color: #D6D7D9
+*/
 
 body {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   background: white;
 }
-#backgroundTable {
+.backgroundTable {
   background: white;
 }
 
@@ -135,8 +137,10 @@ table {
 .quote-tick {
   margin-right: 4%;
   height: 50px;
-  // border-right: 35px solid #E65A60;
-  // border-bottom: 35px solid white;
+  /*
+    border-right: 35px solid #E65A60;
+    border-bottom: 35px solid white;
+  */
 }
 .event-wrap {
   background: white;
@@ -162,14 +166,14 @@ table {
   padding: 10px;
   border-radius: 6px;
   background: #E65A60;
-  color: #fff !important;
+  color: white;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .text-center { text-align: center; }
 .text-left { text-align: left; }
-.color-white { color: white !important; }
+.color-white { color: white; }
 
 @media screen and (max-width: 620px) {
   .mobile-block {
